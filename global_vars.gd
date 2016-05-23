@@ -31,11 +31,47 @@ func _deferred_goto_scene(path):
 	get_tree().set_current_scene(current_scene)
 
 # **************************************************
-# SETTINGS VARIABLES
+# PAUSE MENU
 # **************************************************
 
 var paused = false
 
-func toggle_pause():
+func get_paused():
+	return paused
+
+func toggle_paused():
 	paused = not paused
 	return paused
+
+# **************************************************
+# SETTINGS VARIABLES
+# **************************************************
+
+var difficulty = 0
+
+func get_difficulty():
+	return difficulty
+
+func set_difficulty(val):
+	difficulty = val
+
+var sound = true
+
+func get_sound():
+	return sound
+
+func set_sound(val):
+	sound = val
+
+# **************************************************
+# PLAYER VARIABLES
+# **************************************************
+
+var player_name = "Bob Splanch"
+
+func get_player_name():
+	return player_name
+	
+func set_player_name(val):
+	player_name = val
+	
